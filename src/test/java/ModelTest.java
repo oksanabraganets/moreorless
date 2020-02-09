@@ -10,4 +10,11 @@ public class ModelTest {
             assertEquals(true, (number>0)&&(number<100));
         }
     }
+
+    @org.junit.Test
+    public void userMadeGuessTest(){
+        Model model = new Model();
+        int secretNumber = model.thinkOfANumber();
+        assertEquals(true,model.userMadeGuess(secretNumber));
+    }
 }
