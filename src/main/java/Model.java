@@ -11,11 +11,13 @@ public class Model {
 
     public Model(){
         boundHi = BOUND_MAX;
+        statistics = new ArrayList<Integer>();
     }
 
     public int thinkOfANumber(){
         Random r = new Random();
         numberToGuess = r.nextInt(BOUND_MAX - 1) + 1;
+        System.out.println(numberToGuess);
         return numberToGuess;
     }
 
@@ -33,4 +35,6 @@ public class Model {
     public ArrayList<Integer> getStatistics(){
         return statistics;
     }
+    public int getBoundLow(){return boundLow;}
+    public int getBoundHi(){return boundHi;}
 }

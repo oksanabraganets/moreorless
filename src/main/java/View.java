@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class View {
     public static final String INPUT_INT_DATA = "Input INT value from %d to %d %n";
     public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
+    public static final String CONGRATULATIONS = "Congratulations! You WIN!";
 
     public void printMessage(String message){
         System.out.println(message);
