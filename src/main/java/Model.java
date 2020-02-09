@@ -17,7 +17,6 @@ public class Model {
     public int thinkOfANumber(){
         Random r = new Random();
         numberToGuess = r.nextInt(BOUND_MAX - 1) + 1;
-        System.out.println(numberToGuess);
         return numberToGuess;
     }
 
