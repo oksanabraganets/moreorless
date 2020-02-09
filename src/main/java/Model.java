@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Model {
@@ -6,6 +7,11 @@ public class Model {
     private int boundLow;
     private int boundHi;
     private int numberToGuess;
+    private ArrayList<Integer> statistics;
+
+    public Model(){
+        boundHi = BOUND_MAX;
+    }
 
     public int thinkOfANumber(){
         Random r = new Random();
@@ -13,4 +19,18 @@ public class Model {
         return numberToGuess;
     }
 
+    public boolean userMadeGuess(int supposedNumber){
+        if (numberToGuess == supposedNumber)
+            return true;
+        if (numberToGuess > supposedNumber)
+            boundLow = supposedNumber;
+        else
+            boundHi = supposedNumber;
+        statistics.add(supposedNumber);
+        return false;
+    }
+
+    public ArrayList<Integer> getStatistics(){
+        return statistics;
+    }
 }
